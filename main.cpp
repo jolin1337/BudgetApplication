@@ -9,7 +9,7 @@
 
 
 void help() {
-	std::cout << "jhkjhdjhfdkjfhs\n\n";
+	std::cout << "This program is a simple budget manager that can be used as follows:\n\n";
 	std::cout << "   (-v|--version)                          prints the version of this program\n"
 			  << "   (-h|--help)                             prints this help message\n"
 			  << "   (-p|--period) period                    lists the events active under the specified period\n"
@@ -34,7 +34,12 @@ void help() {
 			  << "   (-M|--modify) groupname,newgroupname    unlinks the events with index from the specified group\n"
 			  << "                                           if the index is negative it will link the events, start\n"
 			  << "                                           counting backwards\n\n"
-			  << "Note: There are not allowed any spaces in group names you can use _ for a nice output)\n";
+			  << "Note: There are not allowed any spaces in group names(you can use _ for a nice output)\n"
+			  << "      Adding spaces to a group may cause some unnexpected errors but the most of the \n"
+			  << "      time nothing will happend.\n";
+}
+void version(){
+	std::cout << "Version nummber: 1.0\nThis program was made by Johannes Lindén and are free to use\n";
 }
 
 int main(int argc, char *argv[]) {
@@ -67,6 +72,7 @@ int main(int argc, char *argv[]) {
 			std::string str;
 			switch(c) {
 				case 'v':
+					version();
 					break;
 				case 'h':
 					help();
